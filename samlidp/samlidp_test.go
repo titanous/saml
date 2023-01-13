@@ -71,7 +71,7 @@ type ServerTest struct {
 	SPCertificate *x509.Certificate
 	SP            saml.ServiceProvider
 
-	Key         crypto.PrivateKey
+	Key         crypto.Signer
 	Certificate *x509.Certificate
 	Server      *Server
 	Store       MemoryStore

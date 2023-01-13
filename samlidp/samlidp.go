@@ -19,7 +19,7 @@ import (
 // Options represent the parameters to New() for creating a new IDP server
 type Options struct {
 	URL         url.URL
-	Key         crypto.PrivateKey
+	Key         crypto.Signer
 	Logger      logger.Interface
 	Certificate *x509.Certificate
 	Store       Store

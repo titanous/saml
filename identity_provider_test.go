@@ -34,7 +34,7 @@ type IdentityProviderTest struct {
 	SPCertificate *x509.Certificate
 	SP            ServiceProvider
 
-	Key             crypto.PrivateKey
+	Key             crypto.Signer
 	Certificate     *x509.Certificate
 	SessionProvider SessionProvider
 	IDP             IdentityProvider
@@ -48,7 +48,7 @@ func mustParseURL(s string) url.URL {
 	return *rv
 }
 
-func mustParsePrivateKey(pemStr []byte) crypto.PrivateKey {
+func mustParsePrivateKey(pemStr []byte) crypto.Signer {
 	b, _ := pem.Decode(pemStr)
 	if b == nil {
 		panic("cannot parse PEM")

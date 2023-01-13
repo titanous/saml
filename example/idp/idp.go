@@ -14,7 +14,7 @@ import (
 	"github.com/crewjam/saml/samlidp"
 )
 
-var key = func() crypto.PrivateKey {
+var key = func() crypto.Signer {
 	b, _ := pem.Decode([]byte(`-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEA0OhbMuizgtbFOfwbK7aURuXhZx6VRuAs3nNibiuifwCGz6u9
 yy7bOR0P+zqN0YkjxaokqFgra7rXKCdeABmoLqCC0U+cGmLNwPOOA0PaD5q5xKhQ
